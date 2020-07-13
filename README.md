@@ -5,9 +5,9 @@
 ## Table of Contents
 **COMPLETED**
 
-+ **[Lesson 4 -- Counting Elements](./lesson04--counting-elements)**
++ **[Lesson 4 -- Counting Elements](./lesson4)**
     - FrogRiverOne, MaxCounters, MissingInteger, PermCheck
-+ **[Lesson 3 -- Time Complexity](./lesson03--time-complexity)**
++ **[Lesson 3 -- Time Complexity](./lesson3)**
     - FrogJmp, PermMissingElem, TapeEquilibrium
 + **Lesson 2 -- Arrays**
     - CyclicRotation, OddOccurrencesInArray
