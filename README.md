@@ -32,4 +32,4 @@
 - **Lesson 90 -- Tasks from Indeed Prime 2015 challenge**
 - **Lesson 91 -- Tasks from Indeed Prime 2016 challenge**
 - **Lesson 92 -- Tasks from Indeed Prime 2016 College Coders challenge**
-- **Lesson 99: Future training**
+- **Lesson 99 -- Future training**
