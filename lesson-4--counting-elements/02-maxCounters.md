@@ -127,28 +127,28 @@ O(N + M)
 
 **Example tests**
 + example test ✔ OK
-  - 1.0.072s OK
+  1. 0.072 s
 
 **Correctness tests**
 + all max_counter operations ✔ OK
-  - 1.0.072s OK
+  1. 0.072 s
 + only one counter ✔ OK
-  - 1.0.072s OK
-  - 2.0.072s OK
+  1. 0.072 s
+  2. 0.072 s
 + small random test, 6 max_counter operations ✔ OK
-  - 1.0.072s OK
+  1. 0.072 s
 + small random test, 10 max_counter operations ✔ OK
-  - 1.0.072s OK
+  1. 0.072 s
 
 **Performance tests**
 + medium random test, 50 max_counter operations ✔ OK
-  - 1.0.072s OK
+  1. 0.072 s
 + medium random test, 500 max_counter operations ✔ OK
-  - 1.0.076s OK
+  1. 0.076 s
 + large random test, 2120 max_counter operations ✔ OK
-  - 1.0.124s OK
+  1. 0.124 s
 + large random test, 10000 max_counter operations ✔ OK
-  - 1.0.160s OK
+  1. 0.160 s
 + all max_counter operations ✔ OK
-  - 1.0.144s OK
-  - 2.0.136s OK
+  1. 0.144 s
+  2. 0.136 s

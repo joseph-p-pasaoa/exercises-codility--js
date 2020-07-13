@@ -102,37 +102,37 @@ O(N)
 
 **Example tests**
 + example test ✔ OK
-  - 1.0.068s OK
+  1. 0.068 s
 
 **Correctness tests**
 + simple test ✔ OK
-  - 1.0.068s OK
+  1. 0.068 s
 + single element ✔ OK
-  - 1.0.068s OK
-  - 2.0.068s OK
+  1. 0.068 s
+  2. 0.068 s
 + frog never across the river ✔ OK
-  - 1.0.068s OK
-  - 2.0.068s OK
-  - 3.0.068s OK
+  1. 0.068 s
+  2. 0.068 s
+  3. 0.068 s
 + 3 random permutation, X = 50 ✔ OK
-  - 1.0.068s OK
+  1. 0.068 s
 + 5 random permutation, X = 60 ✔ OK
-  - 1.0.068s OK
+  1. 0.068 s
 + all leaves in the same place ✔ OK
-  - 1.0.072s OK
-  - 2.0.068s OK
+  1. 0.072 s
+  2. 0.068 s
 
 **Performance tests**
 + 6 and 2 random permutations, X = ~5,000 ✔ OK
-  - 1.0.084s OK
-  - 2.0.080s OK
+  1. 0.084 s
+  2. 0.080 s
 + arithmetic sequences, X = 5,000 ✔ OK
-  - 1.0.076s OK
+  1. 0.076 s
 + 10 and 100 random permutation, X = ~10,000 ✔ OK
-  - 1.0.108s OK
-  - 2.0.104s OK
+  1. 0.108 s
+  2. 0.104 s
 + permutation tests ✔ OK
-  - 1.0.112s OK
-  - 2.0.116s OK
+  1. 0.112 s
+  2. 0.116 s
 + arithmetic sequences, X = 30,000 ✔ OK
-  - 1.0.096s OK
+  1. 0.096 s
