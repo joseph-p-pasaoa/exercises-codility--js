@@ -2,7 +2,7 @@
 1. [FrogRiverOne](#1-frogriverone)
 1. [MaxCounters](#2-maxcounters)
 1. MissingInteger
-1. PermCheck
+1. [PermCheck](#4-permcheck)
 
 ---
 
@@ -95,7 +95,6 @@ function solution(X, A) {
 
 
 // USER INPUT TESTS
-
 (1, [1])
 (2, [2, 2])
 (4, [3])
@@ -109,7 +108,7 @@ function solution(X, A) {
 <details>
   <summary>Show/hide details</summary>
   ...
-  
+
   **Example tests**
   + example test ✔ OK
     1. 0.068 s
@@ -306,6 +305,163 @@ function solution(N, A) {
   + all max_counter operations ✔ OK
     1. 0.144 s
     2. 0.136 s
+
+</details>
+
+---
+
+
+
+
+
+# 4. PermCheck
+
+### INSTRUCTIONS
+
+Difficulty: Painless.
+Check whether array A is a permutation.
+
+<details>
+  <summary>Show/hide details</summary>
+  ...
+
+  A non-empty array A consisting of N integers is given.
+
+  A permutation is a sequence containing each element from 1 to N once, and only once.
+
+  For example, array A such that:
+  ```
+    A[0] = 4
+    A[1] = 1
+    A[2] = 3
+    A[3] = 2
+  ```
+  is a permutation, but array A such that:
+  ```
+    A[0] = 4
+    A[1] = 1
+    A[2] = 3
+  ```
+  is not a permutation, because value 2 is missing.
+
+  The goal is to check whether array A is a permutation.
+
+  Write a function:
+  ```
+    function solution(A);
+  ```
+  that, given an array A, returns 1 if array A is a permutation and 0 if it is not.
+
+  For example, given array A such that:
+  ```
+    A[0] = 4
+    A[1] = 1
+    A[2] = 3
+    A[3] = 2
+  ```
+  the function should return 1.
+
+  Given array A such that:
+  ```
+    A[0] = 4
+    A[1] = 1
+    A[2] = 3
+  ```
+  the function should return 0.
+
+  Write an efficient algorithm for the following assumptions:
+  - N is an integer within the range [1..100,000];
+  - each element of array A is an integer within the range [1..1,000,000,000].
+
+  ---
+</details>
+
+### SUBMISSION
+```
+function solution(A) {
+  const discovered = new Set();
+  const max = A.length;
+  for (let num of A) {
+      if (num > max) return 0;
+      if (discovered.has(num)) return 0;
+      discovered.add(num);
+  }
+  return 1;
+}
+
+
+// USER INPUT TESTS
+[2]
+[1000000000]
+[1]
+[2, 2]
+[4, 2, 1, 3]
+[1, 2, 3, 4, 5, 1]
+[1, 2, 7, 4, 5, 6]
+```
+
+### ANALYSIS SUMMARY
++ The solution obtained perfect score.
++ Detected time complexity: O(N) or O(N * log(N))
+
+<details>
+  <summary>Show/hide details</summary>
+  ...
+
+  **Example tests**
+  + the first example test ✔ OK
+    1. 0.068 s
+  + the second example test ✔ OK
+    1. 0.068 s
+
+  **Correctness tests**
+  + single element with minimal/maximal value ✔ OK
+    1. 0.068 s
+    2. 0.068 s
+  + single element ✔ OK
+    1. 0.068 s
+    2. 0.068 s
+  + two elements ✔ OK
+    1. 0.068 s
+    2. 0.068 s
+    3. 0.068 s
+    4. 0.068 s
+  + total sum is correct, but it is not a permutation, N <= 10 ✔ OK
+    1. 0.068 s
+    2. 0.068 s
+    3. 0.068 s
+    4. 0.068 s
+  + permutation + one element occurs twice, N = ~100 ✔ OK
+    1. 0.068 s
+    2. 0.068 s
+  + permutations of sets like [2..100] for which the anwsers should be false ✔ OK
+    1. 0.068 s
+    2. 0.072 s
+    3. 0.072 s
+
+  **Performance tests**
+  + permutation + few elements occur twice, N = ~10,000 ✔ OK
+    1. 0.092 s
+    2. 0.096 s
+  + total sum is correct, but it is not a permutation, N = ~100,000 ✔ OK
+    1. 0.104 s
+    2. 0.140 s
+  + permutation + one element occurs three times, N = ~100,000 ✔ OK
+    1. 0.140 s
+    2. 0.144 s
+  + sequence 1, 2, ..., N, N = ~100,000 ✔ OK
+    1. 0.140 s
+    2. 0.140 s
+  + all the same values, N = ~100,000 ✔ OK
+    1. 0.068 s
+    2. 0.096 s
+    3. 0.068 s
+  + all sequences are permutations ✔ OK
+    1. 0.068 s
+    2. 0.068 s
+    3. 0.096 s
+    4. 0.140 s
+    5. 0.140 s
 
 </details>
 
