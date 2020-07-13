@@ -1,25 +1,25 @@
 # Lesson 4: Counting Elements
 
-<!-- ## Contents
+## Contents
 1. [FrogRiverOne](#1-frogriverone)
 1. [MaxCounters](#2-maxcounters)
 1. MissingInteger
 1. PermCheck
 
---- -->
+---
 
 
+
+# 1. FrogRiverOne
+
+### INSTRUCTIONS
+
+Difficulty: Painless.
+Find the earliest time when a frog can jump to the other side of a river.
 
 <details>
-  <summary>1. FROGRIVERONE</summary>
-
-  Difficulty: Painless.
-  Find the earliest time when a frog can jump to the other side of a river.
-
-  ---
-
-<details>
-  <summary>Instructions ~</summary>
+  <summary>Show/hide details</summary>
+  ...
 
   A small frog wants to get to the other side of a river. The frog is initially located on one bank of 
   the river (position 0) and wants to get to the opposite bank (position X+1). Leaves fall from a tree 
@@ -74,13 +74,12 @@
   Write an efficient algorithm for the following assumptions:
   - N and X are integers within the range [1..100,000];
   - each element of array A is an integer within the range [1..X].
+
+  ---
 </details>
 
----
-
+### SUBMISSION
 ```
-// SUBMISSION
-
 function solution(X, A) {
   const leavesPresent = {};
   let uniqueCounter = 0;
@@ -93,9 +92,8 @@ function solution(X, A) {
   }
   return -1;
 }
-```
 
-```
+
 // USER INPUT TESTS
 
 (1, [1])
@@ -104,70 +102,70 @@ function solution(X, A) {
 (4, [4, 2, 2, 3, 1, 2])
 ```
 
----
-
 ### ANALYSIS SUMMARY
-The solution obtained perfect score.
++ The solution obtained perfect score.
++ Detected time complexity: O(N)
 
-Detected time complexity:
-O(N)
+<details>
+  <summary>Show/hide details</summary>
+  ...
+  
+  **Example tests**
+  + example test ✔ OK
+    1. 0.068 s
 
----
+  **Correctness tests**
+  + simple test ✔ OK
+    1. 0.068 s
+  + single element ✔ OK
+    1. 0.068 s
+    2. 0.068 s
+  + frog never across the river ✔ OK
+    1. 0.068 s
+    2. 0.068 s
+    3. 0.068 s
+  + 3 random permutation, X = 50 ✔ OK
+    1. 0.068 s
+  + 5 random permutation, X = 60 ✔ OK
+    1. 0.068 s
+  + all leaves in the same place ✔ OK
+    1. 0.072 s
+    2. 0.068 s
 
-**Example tests**
-+ example test ✔ OK
-  1. 0.068 s
+  **Performance tests**
+  + 6 and 2 random permutations, X = ~5,000 ✔ OK
+    1. 0.084 s
+    2. 0.080 s
+  + arithmetic sequences, X = 5,000 ✔ OK
+    1. 0.076 s
+  + 10 and 100 random permutation, X = ~10,000 ✔ OK
+    1. 0.108 s
+    2. 0.104 s
+  + permutation tests ✔ OK
+    1. 0.112 s
+    2. 0.116 s
+  + arithmetic sequences, X = 30,000 ✔ OK
+    1. 0.096 s
 
-**Correctness tests**
-+ simple test ✔ OK
-  1. 0.068 s
-+ single element ✔ OK
-  1. 0.068 s
-  2. 0.068 s
-+ frog never across the river ✔ OK
-  1. 0.068 s
-  2. 0.068 s
-  3. 0.068 s
-+ 3 random permutation, X = 50 ✔ OK
-  1. 0.068 s
-+ 5 random permutation, X = 60 ✔ OK
-  1. 0.068 s
-+ all leaves in the same place ✔ OK
-  1. 0.072 s
-  2. 0.068 s
-
-**Performance tests**
-+ 6 and 2 random permutations, X = ~5,000 ✔ OK
-  1. 0.084 s
-  2. 0.080 s
-+ arithmetic sequences, X = 5,000 ✔ OK
-  1. 0.076 s
-+ 10 and 100 random permutation, X = ~10,000 ✔ OK
-  1. 0.108 s
-  2. 0.104 s
-+ permutation tests ✔ OK
-  1. 0.112 s
-  2. 0.116 s
-+ arithmetic sequences, X = 30,000 ✔ OK
-  1. 0.096 s
-
----
 </details>
 
+---
 
+
+
+
+
+# 2. MaxCounters
+
+### INSTRUCTIONS
+
+Difficulty: Respectable.
+Calculate the values of counters after applying all alternating operations: increase counter by 1; 
+set value of all counters to current maximum.
 
 <details>
-  <summary>2. MAXCOUNTERS</summary>
-
-  Difficulty: Respectable.
-  Calculate the values of counters after applying all alternating operations: increase counter by 1; 
-  set value of all counters to current maximum.
-
-
-  ---
-
-<details>
-  <summary>Instructions ~</summary>
+  <summary>Show/hide details</summary>
+  ...
 
   You are given N counters, initially set to 0, and you have two possible operations on them:
     + increase(X) − counter X is increased by 1,
@@ -224,67 +222,62 @@ O(N)
   Write an efficient algorithm for the following assumptions:
     - N and M are integers within the range [1..100,000];
     - each element of array A is an integer within the range [1..N + 1].
-  </details>
 
   ---
+</details>
 
-  ```
-  // SUBMISSION
-
-  function solution(N, A) {
-    let offsetsHash = {};
-    let highestValue = 0;
-    let baseValue = 0;
-    for (let num of A) {
-        if (num === N + 1) {
-            baseValue = highestValue;
-            offsetsHash = {};
-        } else if (!offsetsHash[num]) {
-            offsetsHash[num] = 1;
-            if (highestValue === baseValue) {
-                highestValue = highestValue + 1;
-            }
-        } else {
-            offsetsHash[num] += 1;
-            const actualValue = offsetsHash[num] + baseValue;
-            if (actualValue > highestValue) {
-                highestValue = actualValue;
-            }
-        }
-    }
-    let outputArray = [];
-    for (let i = 0; i < N; i++) {
-        if (offsetsHash[i + 1]) {
-            outputArray.push(baseValue + offsetsHash[i + 1]);
-        } else {
-            outputArray.push(baseValue);
-        }
-    }
-    return outputArray;
+### SUBMISSION
+```
+function solution(N, A) {
+  let offsetsHash = {};
+  let highestValue = 0;
+  let baseValue = 0;
+  for (let num of A) {
+      if (num === N + 1) {
+          baseValue = highestValue;
+          offsetsHash = {};
+      } else if (!offsetsHash[num]) {
+          offsetsHash[num] = 1;
+          if (highestValue === baseValue) {
+              highestValue = highestValue + 1;
+          }
+      } else {
+          offsetsHash[num] += 1;
+          const actualValue = offsetsHash[num] + baseValue;
+          if (actualValue > highestValue) {
+              highestValue = actualValue;
+          }
+      }
   }
-  ```
+  let outputArray = [];
+  for (let i = 0; i < N; i++) {
+      if (offsetsHash[i + 1]) {
+          outputArray.push(baseValue + offsetsHash[i + 1]);
+      } else {
+          outputArray.push(baseValue);
+      }
+  }
+  return outputArray;
+}
 
-  ```
-  // USER INPUT TESTS
 
-  (3, [3, 3, 4, 1, 2, 1, 1])
-  (1, [2])
-  (1, [1])
-  (3, [4, 4, 4])
-  (3, [2, 4, 4])
-  (2, [1, 2])
-  (2, [2, 3])
-  ```
+// USER INPUT TESTS
+(3, [3, 3, 4, 1, 2, 1, 1])
+(1, [2])
+(1, [1])
+(3, [4, 4, 4])
+(3, [2, 4, 4])
+(2, [1, 2])
+(2, [2, 3])
+```
 
-  ---
+### ANALYSIS SUMMARY
++ The solution obtained perfect score.
++ Detected time complexity: O(N + M)
 
-  ## ANALYSIS SUMMARY
-  The solution obtained perfect score.
-
-  Detected time complexity:
-  O(N + M)
-
-  ---
+<details>
+  <summary>Show/hide details</summary>
+  ...
 
   **Example tests**
   + example test ✔ OK
@@ -314,5 +307,6 @@ O(N)
     1. 0.144 s
     2. 0.136 s
 
-  ---
-  </details>
+</details>
+
+---
