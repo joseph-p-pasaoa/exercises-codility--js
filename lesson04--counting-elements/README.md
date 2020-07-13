@@ -1,12 +1,12 @@
 # Lesson 4: Counting Elements
-
-## Contents
 1. [FrogRiverOne](#1-frogriverone)
 1. [MaxCounters](#2-maxcounters)
 1. MissingInteger
 1. PermCheck
 
 ---
+
+
 
 
 
