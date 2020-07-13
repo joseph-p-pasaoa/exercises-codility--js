@@ -1,7 +1,105 @@
 # Lesson 3: Time Complexity
-1. FrogJmp
+1. [FrogJmp](#1-frogjmp)
 1. PermMissingElem
 1. [TapeEquilibrium](#3-tapeequilibrium)
+
+---
+
+
+
+
+
+# 1. FrogJmp
+
+### INSTRUCTIONS
+"Painless" Difficulty.
+Count minimal number of jumps from position X to Y.
+
+<details>
+  <summary>Show/hide details</summary>
+  ...
+
+  A small frog wants to get to the other side of the road. The frog is currently located at position X and wants to get to a position greater than or equal to Y. The small frog always jumps a fixed distance, D.
+
+  Count the minimal number of jumps that the small frog must perform to reach its target.
+
+  Write a function:
+  ```
+    function solution(X, Y, D);
+  ```
+  that, given three integers X, Y and D, returns the minimal number of jumps from position X to a position equal to or greater than Y.
+
+  For example, given:
+  ```
+  X = 10
+  Y = 85
+  D = 30
+  ```
+  the function should return 3, because the frog will be positioned as follows:
+  - after the first jump, at position 10 + 30 = 40
+  - after the second jump, at position 10 + 30 + 30 = 70
+  - after the third jump, at position 10 + 30 + 30 + 30 = 100
+
+  Write an efficient algorithm for the following assumptions:
+    + X, Y and D are integers within the range [1..1,000,000,000];
+    + X ≤ Y.
+
+  ---
+</details>
+
+### SUBMISSION
+```
+function solution(X, Y, D) {
+    const distanceToY = Y - X;
+    return Math.ceil(distanceToY / D);
+}
+
+
+// USER INPUT TESTS
+(1, 1, 1)
+(10, 20, 9)
+(10, 20, 10)
+(10, 20, 11)
+(1, 15, 3)
+```
+
+### ANALYSIS SUMMARY
++ The solution obtained perfect score.
++ Detected time complexity: O(1)
+
+<details>
+  <summary>Show/hide details</summary>
+  ...
+
+  **Example tests**
+  + example test ✔ OK
+    1. 0.068 s
+
+  **Correctness tests**
+  + simple test ✔ OK
+    1. 0.072 s
+    2. 0.068 s
+    1. 0.068 s
+    2. 0.068 s
+  + no jump needed ✔ OK
+    1. 0.068 s
+    2. 0.068 s
+  + one big jump ✔ OK
+    1. 0.068 s
+
+  **Performance tests**
+  + many jumps, D = 2 ✔ OK
+    1. 0.068 s
+  + many jumps, D = 99 ✔ OK
+    1. 0.068 s
+  + many jumps, D = 1283 ✔ OK
+    1. 0.068 s
+  + maximal number of jumps ✔ OK
+    1. 0.068 s
+  + many small jumps ✔ OK
+    1. 0.068 s
+
+</details>
 
 ---
 
