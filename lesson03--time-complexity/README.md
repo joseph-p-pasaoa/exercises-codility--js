@@ -12,12 +12,11 @@
 # 3. TapeEquilibrium
 
 ### INSTRUCTIONS
-
-Difficulty: Painless.
+"Painless" Difficulty.
 Minimize the value |(A[0] + ... + A[P-1]) - (A[P] + ... + A[N-1])|.
 
 <details>
-  <summary>INSTRUCTIONS</summary>
+  <summary>Show/hide details</summary>
   ...
 
   A non-empty array A consisting of N integers is given. Array A represents numbers on a tape.
