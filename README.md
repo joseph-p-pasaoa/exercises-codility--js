@@ -9,7 +9,7 @@
     - CyclicRotation, OddOccurrencesInArray
 + Lesson 3 -- Time Complexity
     - FrogJmp, PermMissingElem, TapeEquilibrium
-+ Lesson 4 -- Counting Elements
++ [Lesson 4 -- Counting Elements](./lesson04--counting-elements)
     - FrogRiverOne, MaxCounters, MissingInteger, PermCheck
 + Lesson 5 -- Prefix Sums
 + Lesson 6 -- Sorting
