@@ -14,7 +14,7 @@
 
 ### INSTRUCTIONS
 
-Difficulty: Painless.
+"Painless" Difficulty.
 Find the earliest time when a frog can jump to the other side of a river.
 
 <details>
@@ -158,7 +158,7 @@ function solution(X, A) {
 
 ### INSTRUCTIONS
 
-Difficulty: Respectable.
+"Respectable" Difficulty.
 Calculate the values of counters after applying all alternating operations: increase counter by 1; 
 set value of all counters to current maximum.
 
@@ -318,7 +318,7 @@ function solution(N, A) {
 
 ### INSTRUCTIONS
 
-Difficulty: Painless.
+"Painless" Difficulty.
 Check whether array A is a permutation.
 
 <details>
