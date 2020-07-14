@@ -1,6 +1,6 @@
 # Lesson 3: Time Complexity
 1. [FrogJmp](#1-frogjmp)
-1. PermMissingElem
+1. [PermMissingElem](#2-permmissingelem)
 1. [TapeEquilibrium](#3-tapeequilibrium)
 
 ---
@@ -98,6 +98,118 @@ function solution(X, Y, D) {
     1. 0.068 s
   + many small jumps ✔ OK
     1. 0.068 s
+
+</details>
+
+---
+
+
+
+
+
+# 2. PermMissingElem
+
+### INSTRUCTIONS
+"Painless" Difficulty.
+Find the missing element in a given permutation.
+
+<details>
+  <summary>Show/hide details</summary>
+  ...
+
+  An array A consisting of N different integers is given. The array contains integers in the 
+  range [1..(N + 1)], which means that exactly one element is missing.
+
+  Your goal is to find that missing element.
+
+  Write a function:
+  ```
+    function solution(A);
+  ```
+  that, given an array A, returns the value of the missing element.
+
+  For example, given array A such that:
+  ```
+    A[0] = 2
+    A[1] = 3
+    A[2] = 1
+    A[3] = 5
+  ``` 
+  the function should return 4, as it is the missing element.
+
+  Write an efficient algorithm for the following assumptions:
+    + N is an integer within the range [0..100,000];
+    + the elements of A are all distinct;
+    + each element of array A is an integer within the range [1..(N + 1)].
+
+  ---
+</details>
+
+### SUBMISSION
+```
+function solution(A) {
+  let overflow = 0;
+  for (let i = 0; i < A.length; i++) {
+      overflow += A[i];
+      overflow -= i + 1;
+  }
+  return A.length - overflow + 1;
+}
+
+
+// USER INPUT TESTS
+[]
+[2]
+[3, 2, 4]
+[2, 5, 1, 3]
+[1, 2, 3, 4, 6]
+[6, 5, 4, 3, 1]
+[2, 3, 4, 5, 6]
+[6, 5, 4, 3, 2]
+```
+
+### ANALYSIS SUMMARY
++ The solution obtained perfect score.
++ Detected time complexity: O(N) or O(N * log(N))
+
+<details>
+  <summary>Show/hide details</summary>
+  ...
+
+  **Example tests**
+  + example test ✔ OK
+    1. 0.072 s
+
+  **Correctness tests**
+  + empty list and single element ✔ OK
+    1. 0.068 s
+    2. 0.068 s
+  + the first or the last element is missing ✔ OK
+    1. 0.068 s
+    2. 0.068 s
+  + single element ✔ OK
+    1. 0.072 s
+    2. 0.072 s
+  + two elements ✔ OK
+    1. 0.072 s
+    2. 0.072 s
+    3. 0.068 s
+  + simple test ✔ OK
+    1. 0.072 s
+
+  **Performance tests**
+  + medium test, length = ~10,000 ✔ OK
+    1. 0.080 s
+  + medium test, length = ~10,000 ✔ OK
+    1. 0.080 s
+  + range sequence, length = ~100,000 ✔ OK
+    1. 0.108 s
+    2. 0.096 s
+    3. 0.096 s
+  + large test, length = ~100,000 ✔ OK
+    1. 0.108 s
+  + large test, length = ~100,000 ✔ OK
+    1. 0.100 s
 
 </details>
 
