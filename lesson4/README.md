@@ -1,7 +1,7 @@
 # Lesson 4: Counting Elements
 1. [FrogRiverOne](#1-frogriverone)
 1. [MaxCounters](#2-maxcounters)
-1. MissingInteger
+1. [MissingInteger](#3-missinginteger)
 1. [PermCheck](#4-permcheck)
 
 ---
@@ -232,15 +232,15 @@ function solution(N, A) {
   let highestValue = 0;
   let baseValue = 0;
   for (let num of A) {
-      if (num === N + 1) {
+      if (num === N + 1) {  // Checks if all counters should match highestValue
           baseValue = highestValue;
           offsetsHash = {};
-      } else if (!offsetsHash[num]) {
+      } else if (!offsetsHash[num]) { // Instantiates first offset of num
           offsetsHash[num] = 1;
           if (highestValue === baseValue) {
-              highestValue = highestValue + 1;
+              highestValue += 1;
           }
-      } else {
+      } else {  // Increments offset of num
           offsetsHash[num] += 1;
           const actualValue = offsetsHash[num] + baseValue;
           if (actualValue > highestValue) {
@@ -248,6 +248,8 @@ function solution(N, A) {
           }
       }
   }
+
+  // Use finished offsetsHash to create and return outputArray
   let outputArray = [];
   for (let i = 0; i < N; i++) {
       if (offsetsHash[i + 1]) {
@@ -305,6 +307,117 @@ function solution(N, A) {
   + all max_counter operations ✔ OK
     1. 0.144 s
     2. 0.136 s
+
+</details>
+
+---
+
+
+
+
+
+# 3. MissingInteger
+
+## INSTRUCTIONS
+"Respectable" Difficulty.
+Find the smallest positive integer that does not occur in a given sequence.
+
+<details>
+  <summary>Show/hide details</summary>
+  ...
+
+  This is a demo task.
+
+  Write a function:
+  ```
+    function solution(A);
+  ```
+  that, given an array A of N integers, returns the smallest positive integer (greater than 0) that 
+  does not occur in A.
+
+  For example, given A = [1, 3, 6, 4, 1, 2], the function should return 5.
+
+  Given A = [1, 2, 3], the function should return 4.
+
+  Given A = [−1, −3], the function should return 1.
+
+  Write an efficient algorithm for the following assumptions:
+    + N is an integer within the range [1..100,000];
+    + each element of array A is an integer within the range [−1,000,000..1,000,000].
+
+  ---
+</details>
+
+### SUBMISSION
+```
+function solution(A) {
+  const values = new Set(A);
+  for (let i = 1; i <= 1000001; i++) {
+      if (values.has(i) === false) return i;
+  }
+}
+
+
+// USER INPUT TESTS
+[-5]
+[2]
+[0]
+[1]
+[3, 2, -1]
+[2, 1, 3, 4, 6, 5]
+[1, 0, -1]
+[-1000000, -999999]
+[7, 6, 5, 4, 3, 2, 1, 0]
+[4, 3, 2, 0]
+```
+
+### ANALYSIS SUMMARY
++ The solution obtained perfect score.
++ Detected time complexity: O(N) or O(N * log(N))
+
+<details>
+  <summary>Show/hide details</summary>
+  ...
+
+  **Example tests**
+  + first example test ✔ OK
+    1. 0.068 s
+  + second example test ✔ OK
+    1. 0.068 s
+  + third example test ✔ OK
+    1. 0.068 s
+
+  **Correctness tests**
+  + a single element ✔ OK
+    1. 0.068 s
+    2. 0.068 s
+    3. 0.068 s
+    4. 0.068 s
+  + simple test ✔ OK
+    1. 0.068 s
+    2. 0.068 s
+    3. 0.068 s
+  + minimal and maximal values ✔ OK
+    1. 0.068 s
+    2. 0.068 s
+  + shuffled sequence of 0...100 and then 102...200 ✔ OK
+    1. 0.072 s
+    2. 0.068 s
+  + shuffled sequence -100 ... -1 ✔ OK
+    1. 0.068 s
+
+  **Performance tests**
+  + chaotic sequences length=10005 (with minus) ✔ OK
+    1. 0.088 s
+    2. 0.092 s
+    3. 0.096 s
+  + chaotic + sequence 1, 2, ..., 40000 (without minus) ✔ OK
+    1. 0.136 s
+  + shuffled sequence 1, 2, ..., 100000 (without minus) ✔ OK
+    1. 0.144 s
+    2. 0.140 s
+  + chaotic + many -1, 1, 2, 3 (with minus) ✔ OK
+    1. 0.120 s
 
 </details>
 
