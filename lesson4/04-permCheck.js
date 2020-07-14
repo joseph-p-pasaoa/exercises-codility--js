@@ -1,4 +1,4 @@
-/* 02-PERMCHECK
+/* 04-PERMCHECK
 Check whether array A is a permutation.
 ---
 
