@@ -58,15 +58,15 @@ function solution(N, A) {
   let highestValue = 0;
   let baseValue = 0;
   for (let num of A) {
-      if (num === N + 1) {
+      if (num === N + 1) {  // Checks if all counters should match highestValue
           baseValue = highestValue;
           offsetsHash = {};
-      } else if (!offsetsHash[num]) {
+      } else if (!offsetsHash[num]) { // Instantiates first offset of num
           offsetsHash[num] = 1;
           if (highestValue === baseValue) {
-              highestValue = highestValue + 1;
+              highestValue += 1;
           }
-      } else {
+      } else {  // Increments offset of num
           offsetsHash[num] += 1;
           const actualValue = offsetsHash[num] + baseValue;
           if (actualValue > highestValue) {
@@ -74,6 +74,8 @@ function solution(N, A) {
           }
       }
   }
+
+  // Use finished offsetsHash to create and return outputArray
   let outputArray = [];
   for (let i = 0; i < N; i++) {
       if (offsetsHash[i + 1]) {
