@@ -9,7 +9,7 @@
     - FrogRiverOne, MaxCounters, MissingInteger, PermCheck
 + **[Lesson 3 -- Time Complexity](./lesson3)**
     - FrogJmp, PermMissingElem, TapeEquilibrium
-+ **Lesson 2 -- Arrays**
++ **[Lesson 2 -- Arrays](./lesson2)**
     - CyclicRotation, OddOccurrencesInArray
 + **[Lesson 1 -- Iterations](./lesson1)**
     - BinaryGap
