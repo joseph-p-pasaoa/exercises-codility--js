@@ -5,6 +5,8 @@
 ## Table of Contents
 **COMPLETED**
 
++ **[Lesson 5 -- Prefix Sums](./lesson5)**
+    - CountDiv, GenomicRangeQuery, MinAvgTwoSlice, PassingCars
 + **[Lesson 4 -- Counting Elements](./lesson4)**
     - FrogRiverOne, MaxCounters, MissingInteger, PermCheck
 + **[Lesson 3 -- Time Complexity](./lesson3)**
@@ -16,7 +18,6 @@
 
 ---
 
-- **Lesson 5 -- Prefix Sums**
 - **Lesson 6 -- Sorting**
 - **Lesson 7 -- Stacks and Queues**
 - **Lesson 8 -- Leader**
