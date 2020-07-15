@@ -11,7 +11,7 @@
     - FrogJmp, PermMissingElem, TapeEquilibrium
 + **Lesson 2 -- Arrays**
     - CyclicRotation, OddOccurrencesInArray
-+ **Lesson 1 -- Iterations**
++ **[Lesson 1 -- Iterations](./lesson1)**
     - BinaryGap
 
 ---
