@@ -57,11 +57,13 @@ The solution obtained perfect score.
 Analysis
 Detected time complexity:
 O(N) or O(N*log(N))
-collapse allExample tests
+
+-- Example tests
 ▶example1
 example test✔OK
 1.0.072 sOK
-collapse allCorrectness tests
+
+-- Correctness tests
 ▶simple1
 simple test n=5✔OK
 1.0.072 sOK
@@ -77,7 +79,8 @@ small random test n=201✔OK
 ▶small2
 small random test n=601✔OK
 1.0.072 sOK
-collapse allPerformance tests
+
+-- Performance tests
 ▶medium1
 medium random test n=2,001✔OK
 1.0.072 sOK
