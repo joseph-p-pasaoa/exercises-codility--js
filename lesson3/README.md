@@ -41,8 +41,8 @@ Count minimal number of jumps from position X to Y.
   - after the third jump, at position 10 + 30 + 30 + 30 = 100
 
   Write an efficient algorithm for the following assumptions:
-    + X, Y and D are integers within the range [1..1,000,000,000];
-    + X ≤ Y.
+  - X, Y and D are integers within the range [1..1,000,000,000];
+  - X ≤ Y.
 
   ---
 </details>
@@ -138,9 +138,9 @@ Find the missing element in a given permutation.
   the function should return 4, as it is the missing element.
 
   Write an efficient algorithm for the following assumptions:
-    + N is an integer within the range [0..100,000];
-    + the elements of A are all distinct;
-    + each element of array A is an integer within the range [1..(N + 1)].
+  - N is an integer within the range [0..100,000];
+  - the elements of A are all distinct;
+  - each element of array A is an integer within the range [1..(N + 1)].
 
   ---
 </details>
@@ -278,8 +278,8 @@ Minimize the value |(A[0] + ... + A[P-1]) - (A[P] + ... + A[N-1])|.
   the function should return 1, as explained above.
 
   Write an efficient algorithm for the following assumptions:
-  + N is an integer within the range [2..100,000];
-  + each element of array A is an integer within the range [−1,000..1,000].
+  - N is an integer within the range [2..100,000];
+  - each element of array A is an integer within the range [−1,000..1,000].
 
   ---
 </details>
