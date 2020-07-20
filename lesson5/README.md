@@ -1,8 +1,8 @@
 # Lesson 5: Prefix Sums
 1. [CountDiv](#1-countdiv)
 2. [GenomicRangeQuery](#2-genomicrangequery)
-3. MinAvgTwoSlice
-4. PassingCars
+3. [MinAvgTwoSlice](#3-minavgtwoslice)
+4. [PassingCars](#4-passingcars)
 
 ---
 
